@@ -38,7 +38,8 @@ class App extends Component {
     render() {
 
         let notes = this.state.notes.map((val, key) => {
-            return <Note key={key} noteText={val} />
+            return <Note key={key} noteText={val} 
+                    deleteMethod={ () => this.deleteNote(key) }/>
         })
 
         return (
