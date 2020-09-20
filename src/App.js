@@ -25,6 +25,10 @@ class App extends Component {
         this.textInput.focus();
     }
 
+    crossoutNote() {
+        
+    }
+
     render() {
         return (
             <div className="main-container">
