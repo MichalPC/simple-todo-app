@@ -10,6 +10,10 @@ class App extends Component {
         }
     }
 
+    updateNoteText(noteText) {
+        this.setState({ noteText: noteText.target.value })
+    }
+
     render() {
         return (
             <div className="main-container">
