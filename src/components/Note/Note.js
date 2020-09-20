@@ -6,7 +6,7 @@ class Note extends Component {
     render() {
         return (
             <div className="note-container" onClick={this.props.crossoutMethod}>
-                <div className="noteText">{this.props.noteText}</div>
+                <div className="note-text">{this.props.noteText}</div>
 
                 <div id className="delete-button" onClick={this.props.deleteMethod}>
                     <div className="line" id="line-one"></div>
