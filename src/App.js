@@ -16,6 +16,15 @@ class App extends Component {
         this.setState({ noteText: noteText.target.value })
     }
 
+    addNote() {
+        if (this.state.noteText === '') {return}
+
+        let notesArr = this.state.notes;
+        notesArr.push(this.state.noteText);
+        this.setState({ noteText: ''});
+        this.textInput.focus();
+    }
+
     render() {
         return (
             <div className="main-container">
