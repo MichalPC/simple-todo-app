@@ -38,7 +38,7 @@ class App extends Component {
                         onChange={noteText => this.updateNoteText(noteText)}
                         />
 
-                    <div className="btn">Add</div>
+                    <div className="btn" onClick={this.addNote.bind(this)}>Add</div>
                 </div>
             </div>
         )
