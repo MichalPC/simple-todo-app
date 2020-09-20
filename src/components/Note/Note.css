@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
+
+:root {
+    --textColor: rgb(109, 109, 109);
+
+    --noteColor: white;
+    --noteRadius: 8px;
+}
+
+.note-container {
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    margin: 0 auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding-left: 20px;
+
+    width: 90%;
+    height: 160px;
+
+    background-color: var(--noteColor);
+    border-radius: var(--noteRadius);
+}
+
+.note-text {
+    font-size: 30px;
+}
+
+.delete-button {
+    height: 80px;
+    width: 80px;
+}
+
+.delete-button:hover > .line {
+    background-color: red;
+}
+
+.line {
+    height: 10px;
+    width: 50px;
+
+    margin: 0 auto;
+    
+    border-radius: 8px;
+
+    background-color: gray; 
+
+    transition: background-color 150ms ease-in-out;
+}
+
+#line-one {
+    transform: rotate(-45deg) translate(-25px, 25px);
+}
+
+#line-two {
+    transform: rotate(45deg) translate(18px, 18px);
+}
