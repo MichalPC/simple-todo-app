@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
-import './components/Note/Note.js'
+import Note from './components/Note/Note'
 
 class App extends Component {
 
@@ -26,7 +26,7 @@ class App extends Component {
     }
 
     crossoutNote() {
-        
+
     }
 
     render() {
