@@ -30,6 +30,11 @@ class App extends Component {
     }
 
     render() {
+
+        let notes = this.state.notes.map((val, key) => {
+            return <Note key={key} noteText={val} />
+        })
+
         return (
             <div className="main-container">
                 <div className="header"> Simple To-Do App </div>
@@ -44,6 +49,8 @@ class App extends Component {
 
                     <div className="btn" onClick={this.addNote.bind(this)}>Add</div>
                 </div>
+
+                {notes}
             </div>
         )
     }
