@@ -26,7 +26,7 @@ class App extends Component {
                         ref={((input) => {this.textInput = input})}
                         className="textInput"
                         value={this.state.noteText}
-                        onChangeText={noteText => this.updateNoteText(noteText)}
+                        onChange={noteText => this.updateNoteText(noteText)}
                         />
 
                     <div className="btn">Add</div>
