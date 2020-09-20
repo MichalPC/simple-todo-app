@@ -14,6 +14,15 @@ class App extends Component {
         return (
             <div className="main-container">
                 <div className="header"> Simple To-Do App </div>
+
+                <div className="btn">Add</div>
+
+                <input type="text-box" 
+                    ref={((input) => {this.textInput = input})}
+                    className="textInput"
+                    value={this.state.noteText}
+                    onChangeText={noteText => this.updateNoteText(noteText)}
+                    />
             </div>
         )
     }
