@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
+
+:root {
+    --foregroundColor: rgb(248, 170, 0);
+    --backgroundColor: rgb(255, 191, 94);
+
+    --textColor: rgb(109, 109, 109);
+
+    --buttonRadius: 8px;
+}
+
+* {
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    background: #f1f1f1;
+}
+
+#root {
+    width: 100%;
+    height: 100%;
+}
+
+.main-container {
+    padding-bottom: 80px;
+}
+
+.header {
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+    font-family: 'Fredoka One', cursive;
+    font-size: 34px;
+    text-align: center;
+    
+    color: var(--textColor);
+    background: var(--foregroundColor);
+
+    user-select: none;
+}
+
+.input-container {
+    display: flex;
+
+    justify-content: space-around;
+    align-items: center;
+}
+
+.btn {
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    height:72px;
+    width: 192px;
+
+    margin-right: 20px;
+
+    color: var(--textColor);
+    background-color: var(--foregroundColor);
+
+    border-radius: var(--buttonRadius);
+
+    font-family: 'Fredoka One', cursive;
+    font-weight: 200;
+    font-size: 28px;
+    
+    cursor: pointer;
+    user-select: none;
+
+    transition: background-color 150ms ease-in;
+}
+.btn:hover {
+    background-color: var(--backgroundColor);
+}
+
+.textInput {
+    height: 72px;
+    width:80%;
+
+    margin:30px;
+    padding-left: 20px;
+
+    border-radius: var(--buttonRadius);
+    border: none;
+
+    color: var(--textColor);
+
+    font-size: 24px;
+}
