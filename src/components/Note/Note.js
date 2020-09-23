@@ -20,7 +20,7 @@ class Note extends Component {
             <div className="note-container" onClick={this.props.crossoutMethod}>
                 <div className="note-text">{this.props.noteText}</div>
 
-                <div id className="delete-button" onClick={this.props.deleteMethod}>
+                <div className="delete-button" onClick={this.props.deleteMethod}>
                     <div className="line" id="line-one"></div>
                     <div className="line" id="line-two"></div>
                 </div>
