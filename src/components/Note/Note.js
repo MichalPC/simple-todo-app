@@ -3,6 +3,14 @@ import './Note.css';
 
 class Note extends Component {
 
+    constructor() {
+        super();
+
+        this.state = {
+            crossedOut: false,
+        };
+    }
+
     render() {
         return (
             <div className="note-container" onClick={this.props.crossoutMethod}>
