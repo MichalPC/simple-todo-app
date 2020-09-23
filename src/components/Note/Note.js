@@ -11,6 +11,10 @@ class Note extends Component {
         };
     }
 
+    crossOut() {
+        this.setState({ crossedOut: !this.state.crossOut })
+    }
+
     render() {
         return (
             <div className="note-container" onClick={this.props.crossoutMethod}>
