@@ -16,9 +16,13 @@ class Note extends Component {
     }
 
     render() {
+        
+        let noteTextClass = this.state.crossedOut ? "text-crossout" : ""
+        noteTextClass = "note-text " + noteTextClass
+
         return (
             <div className="note-container" onClick={this.props.crossoutMethod}>
-                <div className="note-text">{this.props.noteText}</div>
+                <div className={ noteTextClass }>{this.props.noteText}</div>
 
                 <div className="delete-button" onClick={this.props.deleteMethod}>
                     <div className="line" id="line-one"></div>
