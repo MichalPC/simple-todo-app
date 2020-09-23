@@ -58,3 +58,7 @@
 #line-two {
     transform: rotate(45deg) translate(18px, 18px);
 }
+
+.text-crossout {
+    text-decoration: line-through;
+}
