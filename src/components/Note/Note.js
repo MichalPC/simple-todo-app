@@ -12,7 +12,7 @@ class Note extends Component {
     }
 
     crossOut() {
-        this.setState({ crossedOut: !this.state.crossOut })
+        this.setState({ crossedOut: !this.state.crossedOut })
     }
 
     render() {
