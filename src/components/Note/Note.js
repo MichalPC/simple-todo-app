@@ -22,7 +22,7 @@ class Note extends Component {
 
         return (
             <div className="note-container" onClick={this.props.crossoutMethod}>
-                <div className={ noteTextClass }>{this.props.noteText}</div>
+                <div className={ noteTextClass } onClick={ this.crossOut.bind(this) }>{this.props.noteText}</div>
 
                 <div className="delete-button" onClick={this.props.deleteMethod}>
                     <div className="line" id="line-one"></div>
