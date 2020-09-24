@@ -40,6 +40,8 @@ class App extends Component {
         let notesArr = this.state.notes;
         notesArr.splice(index, 1);
         this.setState({ notes: notesArr })
+
+        this.saveNotesLocally()
     }
 
     saveNotesLocally() {
