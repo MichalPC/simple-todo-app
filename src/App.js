@@ -38,15 +38,20 @@ class App extends Component {
         this.setState({ notes: notesArr })
     }
 
-    setNotes(newNotes) {
-        this.setState({ notes: newNotes})
-    }
-
     saveNotesLocally() {
         if (localStorage.getItem('localNotes') === null) {
             localStorage.setItem('localNotes', JSON.stringify([]));
         } else{
             localStorage.setItem('localNotes', JSON.stringify(this.state.notes));
+        }
+    }
+
+    loadNotesLocally() {
+        if (localStorage.getItem('localNotes') === null) {
+
+        } else {
+            this.setState({notes: JSON.parse(localStorage.getItem('localNotes'))})
+            console.log(JSON.parse(localStorage.getItem('localNotes')))
         }
     }
 
