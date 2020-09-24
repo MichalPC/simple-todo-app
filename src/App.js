@@ -22,6 +22,9 @@ class App extends Component {
         let notesArr = this.state.notes;
         notesArr.push(this.state.noteText);
         this.setState({ noteText: ''});
+
+        this.saveNotesLocally();
+
         this.textInput.focus();
     }
 
@@ -37,6 +40,14 @@ class App extends Component {
 
     setNotes(newNotes) {
         this.setState({ notes: newNotes})
+    }
+
+    saveNotesLocally() {
+        if (localStorage.getItem('localNotes') === null) {
+            localStorage.setItem('localNotes', JSON.stringify([]));
+        } else{
+            localStorage.setItem('localNotes', JSON.stringify(this.state.notes));
+        }
     }
 
     render() {
