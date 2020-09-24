@@ -35,6 +35,10 @@ class App extends Component {
         this.setState({ notes: notesArr })
     }
 
+    setNotes(newNotes) {
+        this.setState({ notes: newNotes})
+    }
+
     render() {
 
         let notes = this.state.notes.map((val, key) => {
