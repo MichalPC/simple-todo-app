@@ -12,6 +12,10 @@ class App extends Component {
         }
     }
 
+    componentDidMount() {
+        this.loadNotesLocally()
+    }
+
     updateNoteText(noteText) {
         this.setState({ noteText: noteText.target.value })
     }
