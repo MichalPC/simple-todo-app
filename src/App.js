@@ -83,7 +83,7 @@ class App extends Component {
                     <div className="btn" onClick={this.addNote.bind(this)}>Add</div>
                 </div>
 
-                {notes}
+                <div className="notes">{notes}</div>
             </div>
         )
     }
