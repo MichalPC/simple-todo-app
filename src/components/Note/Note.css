@@ -7,6 +7,28 @@
     --noteRadius: 8px;
 }
 
+* {
+    margin: 0;
+    padding: 0;
+
+    box-sizing: border-box;
+
+    overflow: hidden;
+}
+
+.header {
+    min-height: 12vh;
+}
+
+.input-container {
+    min-height: 12vh;
+}
+
+.notes {
+    height: 76vh;
+    overflow: scroll;
+}
+
 .note-container {
     display: flex;
 

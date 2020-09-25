@@ -12,6 +12,10 @@ class App extends Component {
         }
     }
 
+    componentDidMount() {
+        this.loadNotesLocally()
+    }
+
     updateNoteText(noteText) {
         this.setState({ noteText: noteText.target.value })
     }
@@ -22,6 +26,9 @@ class App extends Component {
         let notesArr = this.state.notes;
         notesArr.push(this.state.noteText);
         this.setState({ noteText: ''});
+
+        this.saveNotesLocally();
+
         this.textInput.focus();
     }
 
@@ -33,6 +40,25 @@ class App extends Component {
         let notesArr = this.state.notes;
         notesArr.splice(index, 1);
         this.setState({ notes: notesArr })
+
+        this.saveNotesLocally()
+    }
+
+    saveNotesLocally() {
+        if (localStorage.getItem('localNotes') === null) {
+            localStorage.setItem('localNotes', JSON.stringify([]));
+        } else{
+            localStorage.setItem('localNotes', JSON.stringify(this.state.notes));
+        }
+    }
+
+    loadNotesLocally() {
+        if (localStorage.getItem('localNotes') === null) {
+
+        } else {
+            this.setState({notes: JSON.parse(localStorage.getItem('localNotes'))})
+            console.log(JSON.parse(localStorage.getItem('localNotes')))
+        }
     }
 
     render() {
@@ -57,7 +83,7 @@ class App extends Component {
                     <div className="btn" onClick={this.addNote.bind(this)}>Add</div>
                 </div>
 
-                {notes}
+                <div className="notes">{notes}</div>
             </div>
         )
     }
